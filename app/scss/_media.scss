@@ -1,0 +1,223 @@
+@media (max-width: 1590px){
+    .slick-arrow.slick-comments-prev, .slick-arrow.slick-comments-next{
+        bottom: 1%;
+    }
+}
+@media (max-width: 1130px){
+    .comments-list__item img{
+        margin-left: 450px;
+    }
+    .tutorial>.container>a.tutorial__order-link{
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .tutorial-list{
+        flex-direction: column;
+        &__item{
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+    }
+}
+@media (max-width: 988px){
+    .comments{
+        padding-bottom: 680px;
+    }
+    .comments-list__item img{
+        margin-left: 400px;
+    }
+    .clients{
+        padding-bottom: 30px;
+    }
+    .clients__inner{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            max-width: 500px;
+        }
+    }
+    
+}
+@media (max-width: 900px){
+    .slick-arrow.slick-prev, .slick-arrow.slick-next{
+        top: 87%;
+    }
+    .catalog-list__item{
+        padding-top: 100px;
+    }
+    .comments-list__item img{
+        margin-left: 350px;
+    }
+    .comments-name::after{
+        width: 470px;
+    }
+    .footer-nav__list{
+        display: block;
+        margin-top: -10px;
+        margin-left: 40px;
+        li{
+            margin-left: 0 !important; 
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: 800px){
+    .item-price{
+        max-width: 300px;
+        font-size: 20px;
+        span{
+            font-size: 30px;
+        }
+    }
+    .item-price__link{
+        max-width: 300px;
+        font-size: 24px;
+    }
+    .catalog-list__item{
+        padding-top: 150px;
+    }
+    .comments{
+        padding-bottom: 750px;
+    }
+    .comments-name::after{
+        width: 370px;
+    }
+    .comments-list__item img{
+        margin-left: 40%;
+    }
+    .comments>.container>h2{
+        margin-bottom: 25px;
+    }
+    .main-nav{
+        display: none;
+    }
+    .header-content>img{
+        display: none;
+    }
+    .blur{
+        display: none;
+    }
+    .header-content{
+        margin-right: 0;
+    }
+    .advantages{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (max-width: 680px){
+    .catalog-list__item{
+        padding-top: 200px;
+    }
+    .item-price{
+        max-width: 300px;
+        font-size: 20px;
+        max-height: 120px;
+        span{
+            font-size: 24px;
+            max-height: 40px;
+            line-height: 24px;
+        }
+    }
+    .item-price__link{
+        max-width: 300px;
+        font-size: 24px;
+        max-height: 45px;
+        line-height: 22px;
+        top: 140px;
+    }
+    .comments-name::after{
+        width: 330px;
+    }
+    .comments-text{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 530px){
+    .comments{
+        padding-bottom: 800px;
+    }
+    .comments-list__item img{
+        margin-left: 35%;
+    }
+    .comments-name::after{
+        width: 250px;
+    }
+}
+@media (max-width: 500px){
+    .comments{
+        padding-bottom: 870px;
+    }
+    h2{
+        font-size: 30px;
+        line-height: 34px;
+    }
+    .footer__inner{
+        flex-direction: column-reverse;
+    }
+    .footer-nav{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 420px){
+    .comments-name::after{
+        width: 200px;
+    }
+    .comments-list__item img{
+        margin-left: 30%;
+    }
+    .comments-text{
+        font-size: 18px;
+    }
+    h1{
+        font-size: 50px;
+    }
+    .card{
+        img{
+            left: 95px;
+            top: 75px;
+        }
+        &-text{
+            top: 190px;
+            left: 15px;
+            font-size: 20px;
+        }
+    }
+    .card, .card-background{
+        width: 270px;
+        height: 270px;
+    }
+    .header__order-link img{
+        max-width: 300px;
+    }
+    .tutorial__order-link img{
+        max-width: 300px;
+    }
+    .tutorial-list{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 380px){
+    .comments-list__item img{
+        margin-left: 25%;
+    }
+    .comments-name::after{
+        width: 160px;
+    }
+    .comments{
+        padding-bottom: 960px;
+    }
+    h2::after{
+        width: 290px;
+    }
+    .social-links{
+        a{
+            margin-right: 10px !important;
+        }
+    }
+}

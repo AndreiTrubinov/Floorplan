@@ -1,21 +1,37 @@
-@import 'vars';
 @import 'global';
 
 $main: #4ABEFF;
 
 .header{
-    background-image: url(../images/header-bg.png);
+    background-image: url(../images/header-bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding-bottom: 95px;
+    position: relative;
+    @media(min-resolution: 2dppx){
+        background-image: url(../images/header-bg@2x.jpg);
+    }
+}
+.header:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.8);
+    z-index: 1;
+  }
+.header>.container{
+    z-index: 2;
 }
 .main-header{
     display: flex;
     justify-content: space-between;
     padding-top: 40px;
     position: relative;
-    
+    z-index: 3;
     &__logo{
         height: 64px;
         max-width: 222px;
@@ -65,12 +81,7 @@ $main: #4ABEFF;
 .main-header{
     position: relative;
 }
-.blur{
-    position: absolute;
-    top: 0;
-    left: 300px;
-    z-index: 0;
-}
+
 .click{
     position: absolute;
     z-index: 1;
@@ -83,6 +94,9 @@ $main: #4ABEFF;
     justify-content: space-between;
     margin-top: -20px;
     margin-right: 85px;
+    img{
+        z-index: 2;
+    }
 }
 h1{
     font-family: 'Comfortaa', cursive;
@@ -97,6 +111,7 @@ h1{
 }
 .advantages{
     margin-top: 135px;
+    z-index: 2;
     a{
         padding-bottom: 63px;
     }
@@ -124,23 +139,25 @@ h1{
     }
     
 }
-.paral {
-    display: none;
-    width: 360px;
-    height: 60px;
-    transform: skew(-28deg);
-    background: $main;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-    font-size: 28px;
-    line-height: 30px;
-    font-weight: 400;
+.header__order-link{
+    background-image: url(../images/button.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    max-height: 57px;
+    width: 393px;
+    position: relative;
     span{
-        transform: skew(28deg);
+        position: absolute;
+        left: 45%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 26px;
     }
 }
+
+
 
 
 
@@ -231,8 +248,26 @@ h2{
     z-index: -1;
 }
 
+
 .tutorial__order-link{
-    margin-left: 385px;
+    background-image: url(../images/button.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 57px;
+    width: 393px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    span{
+        position: absolute;
+        left: 45%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 26px;
+    }
 }
 
 //start catalog
@@ -346,7 +381,7 @@ h2{
 }
 //start comments
 .comments{
-    background-image: url(../images/comments-bg.png);
+    background-image: url(../images/comments-bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -354,6 +389,9 @@ h2{
     height: 100%;
     padding-top: 46px;
     position: relative;
+    @media(min-resolution: 2dppx){
+        background-image: url(../images/comments-bg@2x.jpg);
+    }
     h2{
         color: #fff;
         margin-bottom: -5px;
@@ -500,6 +538,12 @@ h2{
     a+a{
         margin-left: 25px;
     }
+}
+.menu__btn{
+    display: none;
+}
+#menu__toggle{
+    display: none;
 }
 
 

@@ -25,6 +25,13 @@ $(function(){
 		nextArrow: '<img src="images/arrow-right.svg" class="slick-comments-next" alt="">',
     	prevArrow: '<img src="images/arrow-left.svg" class="slick-comments-prev" alt="">',
 	  });
+
+	  $("#menu__toggle").click(function(){
+		$(".main-nav__list").toggleClass("active"); return false;
+	});
+	$("#menu__toggle").click(function(){
+		$("#menu__toggle").toggleClass("active"); return false;
+	});
 	  
 
 });

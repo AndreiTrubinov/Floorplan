@@ -7,18 +7,17 @@
     .comments-list__item img{
         margin-left: 450px;
     }
-    .tutorial>.container>a.tutorial__order-link{
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        justify-content: center;
-    }
-    .tutorial-list{
-        flex-direction: column;
-        &__item{
-            margin: 0 auto;
-            margin-bottom: 40px;
+    .card, .card-background{
+        width: 270px;
+        height: 270px;
+        img{
+            left: 95px;
+            top: 56px;
         }
+    }
+    .card-text{
+        left: 10px;
+        top: 192px;
     }
 }
 @media (max-width: 988px){
@@ -39,7 +38,12 @@
             max-width: 500px;
         }
     }
-    
+    .tutorial-list{
+        flex-wrap: wrap;
+        li+li{
+            margin-left: 25px;
+        }
+    }
 }
 @media (max-width: 900px){
     .slick-arrow.slick-prev, .slick-arrow.slick-next{
@@ -63,9 +67,15 @@
             margin-bottom: 10px;
         }
     }
+    .tutorial-list{
+        li{
+            margin-bottom: 50px;
+        }
+    }
 }
 
 @media (max-width: 800px){
+    
     .item-price{
         max-width: 300px;
         font-size: 20px;
@@ -92,9 +102,7 @@
     .comments>.container>h2{
         margin-bottom: 25px;
     }
-    .main-nav{
-        display: none;
-    }
+    
     .header-content>img{
         display: none;
     }
@@ -107,6 +115,155 @@
     .advantages{
         margin-left: auto;
         margin-right: auto;
+        &-list{
+            margin-bottom: 40px;
+        }
+    }
+    .header{
+        padding-bottom: 120px;
+    }
+    .click{
+        top: 631px;
+    }
+    a.logo{
+        margin-left: 38px;
+    }
+    
+    .main-nav{
+        max-width: 0;
+    }
+    
+    .menu__btn {
+        display: flex; /* используем flex для центрирования содержимого */
+        align-items: center;  /* центрируем содержимое кнопки */
+        position: relative;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 4;
+        margin-top: 0px;
+        margin-left: 0;
+      }
+      /* добавляем "гамбургер" */
+      .menu__btn{
+        
+        border: 1px solid $main; 
+        height: 44px;
+        width: 44px;
+      }
+      .menu__btn > span,
+      .menu__btn > span::before,
+      .menu__btn > span::after {
+        display: block;
+        position: relative;
+        width: 24px;
+        height: 2px;
+        background-color: white;
+        z-index: 2;
+        text-align: center;
+        margin: 0 auto;
+      }
+      .menu__btn > span::before {
+        content: '';
+        top: -7px;
+      }
+      .menu__btn > span::after {
+        content: '';
+        top: 5px;
+      }
+      .main-nav__list {
+        transition: opacity .5s .1s, transform .5s .1s;
+        display: block;
+        position: absolute;
+        right: -31px;
+        opacity: 0;
+        top: -15px;
+        transform: translateX(100%);
+        width: 300px;
+        height: 568px;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background-color: $main;
+        box-shadow: 0 0 5px 9999px rgba(#535353, 0.48);
+        z-index: 5;
+      }
+      /* элементы меню */
+      .main-nav__list>li:nth-child(2){
+        transition: opacity .5s .2s, transform .5s .2s;
+      }
+      .main-nav__list>li:nth-child(3){
+        transition: opacity .5s .3s, transform .5s .3s;
+      }
+      li.main-nav__list-item {
+        display: block;
+        position: relative;
+        padding: 20px 24px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        margin-left: 0 !important;
+        transform: translateX(100%);
+        z-index: 5;
+        &::after{
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            position: absolute;
+            height: 1px;
+            width: 130px;
+            content: '';
+            background: linear-gradient(90deg, rgba(255,255,255,0.20351890756302526) 0%, rgba(255,255,255,0.758140756302521) 20%, rgba(255,255,255,0.7609418767507002) 50%, rgba(255,255,255,0.8057598039215687) 80%, rgba(255,255,255,0.20351890756302526) 100%);
+        }
+      }
+      li.main-nav__list-item a{
+        color: #fff;
+        border-bottom: none !important;
+        font-weight: 600;
+        transition: color .5s ease, padding .5s ease;
+      }
+      
+      #menu__toggle.active ~ .menu__btn > span {
+        transform: rotate(45deg);
+        background-color: #fff;
+      }
+      #menu__toggle.active ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+        background-color: #fff;
+      }
+      #menu__toggle.active ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+        background-color: #fff;
+      }
+      .main-nav__list.active {
+        opacity: 1;
+        transform: translateX(-15px);
+        z-index: 3;
+      }
+      .main-nav__list.active>li.main-nav__list-item {
+        opacity: 1;
+        transform: translateX(-15px);
+        z-index: 3;
+      }
+      li.main-nav__list-item > a:hover,
+      li.main-nav__list-item > a:focus {
+      padding-left: 40px;
+}
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+      transition-duration: .25s;
+    }
+    .tutorial{
+        padding-top: 40px;
+        padding-bottom: 60px;
+        &-list{
+            margin-bottom: 30px;
+        }
     }
 }
 @media (max-width: 680px){
@@ -136,9 +293,59 @@
     .comments-text{
         font-size: 20px;
     }
+    .card, .card-background{
+        width: 230px;
+        height: 230px;
+        img{
+            left: 72px;
+            top: 48px;
+        }
+    }
+    .card-text{
+        left: -5px;
+        top: 169px;
+        font-size: 18px;
+    }
+    li.main-nav__list-item a{
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 530px){
+    h1{
+        font-size: 36px;
+        line-height: 36px;
+    }
+    .advantages{
+        margin-top: 100px;
+    }
+    li.advantages-list__item{
+        font-size: 14px;  
+        line-height: 18px;
+    }
+    .header{
+        padding-bottom: 90px;
+    }
+    a.click{
+        top: 526px;
+    }
+    .header__order-link, .tutorial__order-link{
+        margin: 0 auto;
+        display: block;
+        max-width: 260px;
+        span{
+            font-size: 16px;
+            line-height: 16px;
+            left: 45%;
+        }
+    }
+    .advantages-list{
+        margin-bottom: 45px;
+    }
+    .click{
+        top: 505px;
+        left: 45%;
+    }
     .comments{
         padding-bottom: 800px;
     }
@@ -147,6 +354,13 @@
     }
     .comments-name::after{
         width: 250px;
+    }
+    h2{
+        font-size: 30px;
+        padding-bottom: 15px;
+    }
+    .clients{
+        padding-top: 50px;
     }
 }
 @media (max-width: 500px){
@@ -163,6 +377,25 @@
     .footer-nav{
         margin-bottom: 30px;
     }
+    .main-nav__list{
+        width: 230px;
+        height: 400px;    }
+    .main-header__logo{
+        position: absolute;
+        top: 50px;
+        left: 33px;
+    }
+    .copy{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        span{
+            margin-right: 0;
+        }
+        a{
+            margin-left: 0 !important;
+        }
+    }
 }
 @media (max-width: 420px){
     .comments-name::after{
@@ -174,32 +407,12 @@
     .comments-text{
         font-size: 18px;
     }
-    h1{
-        font-size: 50px;
-    }
-    .card{
-        img{
-            left: 95px;
-            top: 75px;
-        }
-        &-text{
-            top: 190px;
-            left: 15px;
-            font-size: 20px;
-        }
-    }
-    .card, .card-background{
-        width: 270px;
-        height: 270px;
-    }
-    .header__order-link img{
-        max-width: 300px;
-    }
-    .tutorial__order-link img{
-        max-width: 300px;
-    }
     .tutorial-list{
         margin-bottom: 30px;
+    }
+    h2{
+        font-size: 26px;
+        margin-bottom: 60px;
     }
 }
 @media (max-width: 380px){

@@ -18,15 +18,19 @@
     <header class="header">
         <div class="container">
             <section class="main-header">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
                 <a href="#" class="main-header__logo">
-                    <img src="images/logo.png" alt="">
+                    <img src="images/logo.svg" alt="Логотип сайта">
                 </a>
                 <div class="main-header__user-menu">
                     <nav class="main-nav">
                         <ul class="main-nav__list">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">About Us</a></li>
+                            <li class="main-nav__list-item"><a href="#">Home</a></li>
+                            <li class="main-nav__list-item"><a href="#">Pricing</a></li>
+                            <li class="main-nav__list-item"><a href="#">About Us</a></li>
                         </ul>
                     </nav>
                     <a href="#" class="user-menu__login">
@@ -48,8 +52,7 @@
                         </svg>
                     </a>
                 </div>
-                <img class="blur" src="images/blur.png" alt="">
-                <a class="click" href="#tutorial"><img src="images/click.png" alt=""></a>
+                <a class="click" href="#tutorial"><img src="images/click.svg" alt=""></a>
             </section>
             <section class="header-content">
                 <div class="advantages">
@@ -61,22 +64,22 @@
                         <li class="advantages-list__item">GENERATE 30% MORE LEADS</li>
                     </ul>
                     <a class="header__order-link" href="#">
-                        <img src="images/order.png" alt="">
+                        <span>Place an order</span> 
                     </a>
                 </div>
-                <img src="images/header-content.png" alt="">
+                <img src="images/header-content.png" srcset="images/header-content@2x.png 2x" alt="">
             </section>
 
         </div>
     </header>
-    <section class="tutorial"  id="tutorial">
+    <section class="tutorial" id="tutorial">
         <div class="container">
             <h2>How does <span>Floorpo.com</span> work?</h2>
             <ul class="tutorial-list">
                 <li class="tutorial-list__item">
                     <div class="card">
                         <span>1</span>
-                        <img src="images/tutorial1.png" alt="">
+                        <img src="images/tutorial1.svg" alt="">
                         <div class="card-text">
                             Choose floor plan<br>style
                         </div>
@@ -87,7 +90,7 @@
                 <li class="tutorial-list__item">
                     <div class="card">
                         <span>2</span>
-                        <img src="images/tutorial2.png" alt="">
+                        <img src="images/tutorial2.svg" alt="">
                         <div class="card-text">
                             Upload you photos,
                             <br>scan or PDF file
@@ -99,7 +102,7 @@
                 <li class="tutorial-list__item">
                     <div class="card">
                         <span>3</span>
-                        <img src="images/tutorial3.png" alt="">
+                        <img src="images/tutorial3.svg" alt="">
                         <div class="card-text">
                             Get delivered
                         </div>
@@ -109,7 +112,7 @@
                 </li>
             </ul>
             <a class="tutorial__order-link" href="#">
-                <img src="images/order.png" alt="">
+                <span>Place an order</span> 
             </a>
         </div>
     </section>
@@ -118,7 +121,7 @@
             <h2>Pricing and styles</h2>
             <ul class="catalog-list">
                 <li class="catalog-list__item">
-                    <img src="images/catalog1.png" alt="">
+                    <img src="images/catalog1.jpg" srcset="images/catalog1@2x.jpg 2x" alt="">
                     <div class="item-price">
                         <p>Black and white</p>
                         <span>$18</span>
@@ -126,7 +129,7 @@
                     <a class="item-price__link" href="#">Place an order</a>
                 </li>
                 <li class="catalog-list__item">
-                    <img src="images/catalog2.png" alt="">
+                    <img src="images/catalog2.jpg" srcset="images/catalog2@2x.jpg 2x" alt="">
                     <div class="item-price">
                         <p>Simple with color accent</p>
                         <span>$20</span>
@@ -134,7 +137,7 @@
                     <a class="item-price__link" href="#">Place an order</a>
                 </li>
                 <li class="catalog-list__item">
-                    <img src="images/catalog3.png" alt="">
+                    <img src="images/catalog3.jpg" srcset="images/catalog3@2x.jpg 2x" alt="">
                     <div class="item-price">
                         <p>In texture and color</p>
                         <span>$24</span>
@@ -142,7 +145,7 @@
                     <a class="item-price__link" href="#">Place an order</a>
                 </li>
                 <li class="catalog-list__item">
-                    <img src="images/catalog5.png" alt="">
+                    <img src="images/catalog5.jpg" srcset="images/catalog5@2x.jpg 2x" alt="">
                     <div class="item-price">
                         <p>Site plan</p>
                         <span>$7</span>
@@ -150,7 +153,7 @@
                     <a class="item-price__link" href="#">Place an order</a>
                 </li>
                 <li class="catalog-list__item">
-                    <img src="images/catalog6.png" alt="">
+                    <img src="images/catalog6.jpg" srcset="images/catalog6@2x.jpg 2x" alt="">
                     <div class="item-price">
                         <p>3D Plan (per floor)</p>
                         <span>$40</span>
@@ -166,7 +169,7 @@
             <h2>Customers <span>Love Us</span></h2>
             <ul class="comments-list">
                 <li class="comments-list__item">
-                    <img src="images/comments1.png" alt="">
+                    <img src="images/comments1.jpg" alt="">
                     <div class="comments-name">
                         Michael<span class="comments-date">02.12.2020</span>
                     </div>
@@ -209,9 +212,9 @@
         <div class="container">
             <h2>Trusted <span>by:</span></h2>
             <div class="clients__inner">
-                <img src="images/client1.png" alt="">
-                <img src="images/client2.png" alt="">
-                <img src="images/client3.png" alt="">
+                <img src="images/client1.jpg" srcset="images/client1@2x.jpg 2x" alt="">
+                <img src="images/client2.jpg" srcset="images/client2@2x.jpg 2x" alt="">
+                <img src="images/client3.jpg" srcset="images/client3@2x.jpg 2x" alt="">
             </div>
         </div>
     </section>
@@ -220,7 +223,7 @@
             <div class="footer__inner">
                 <div class="footer-social">
                     <div class="social-links">
-                        <a class="social-links__logo" href="#"><img src="images/footer-logo.png" alt=""></a>
+                        <a class="social-links__logo" href="#"><img src="images/logo.svg" alt=""></a>
                         <a class="social-links__instagram" href="#"><img src="images/instagram 1.svg" alt=""></a>
                         <a class="social-links__facebook" href="#"><img src="images/facebook 1.svg" alt=""></a>
                     </div>
